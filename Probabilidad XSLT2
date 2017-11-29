@@ -1,0 +1,61 @@
+
+<!-- para todos los descendientes de bosque-->
+  <xsl:if test="@encendido='1'">
+
+<!-- verifica si está encendido --><br/>
+encendido:
+<xsl:value-of select="position()"/>
+<xsl:value-of select="@nbvalor"/> hijo de 
+<xsl:value-of select="../../@nbvalor"/>
+<xsl:value-of select="../../@nbarbol"/><br/>
+<xsl:for-each select="ancestor-or-self::valor">
+ condicional=<xsl:value-of select="@frecuencia div ../../@frecuencia"/>
+   Nombre=<xsl:value-of select="@nbvalor"/><br/>
+</xsl:for-each>
+<br/>
+  </xsl:if>
+</xsl:for-each><br/>
+
+</xsl:template> Preview
+1
+​
+2
+<!-- para todos los descendientes de bosque-->
+3
+  <xsl:if test="@encendido='1'">
+4
+​
+5
+<!-- verifica si está encendido --><br/>
+6
+encendido:
+7
+<xsl:value-of select="position()"/>
+8
+<xsl:value-of select="@nbvalor"/> hijo de 
+9
+<xsl:value-of select="../../@nbvalor"/>
+10
+<xsl:value-of select="../../@nbarbol"/><br/>
+11
+<xsl:for-each select="ancestor-or-self::valor">
+12
+ condicional=<xsl:value-of select="@frecuencia div ../../@frecuencia"/>
+13
+   Nombre=<xsl:value-of select="@nbvalor"/><br/>
+14
+</xsl:for-each>
+15
+<br/>
+16
+  </xsl:if>
+17
+</xsl:for-each><br/>
+18
+​
+19
+</xsl:template>
+20
+</xsl:stylesheet>
+
+</xsl:stylesheet>
